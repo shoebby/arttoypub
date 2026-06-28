@@ -1,11 +1,66 @@
+/* #region FONTS */
+@font-face {
+    font-family: 'bricktext';
+    src: url(./assets/fonts/BrickTextLogo.otf);
+}
+@font-face {
+    font-family: 'bricktext-expand';
+    src: url(./assets/fonts/BrickTextLogo-Expand.otf);
+}
+@font-face {
+    font-family: 'axelbox';
+    src: url(./assets/fonts/AxelBox.otf);
+}
+@font-face {
+    font-family: 'clash-lite';
+    src: url(./assets/fonts/ClashGrotesk-Extralight.otf);
+}
+@font-face {
+    font-family: 'clash-med';
+    src: url(./assets/fonts/ClashGrotesk-Medium.otf);
+}
+@font-face {
+    font-family: 'clash-bold';
+    src: url(./assets/fonts/ClashGrotesk-Bold.otf);
+}
+@font-face {
+    font-family: 'amalgama';
+    src: url(./assets/fonts/Amalgama.ttf);
+}
+@font-face {
+    font-family: 'atkinson';
+    src: url(./assets/fonts/AtkinsonHyperlegible-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'atkinson';
+    src: url(./assets/fonts/AtkinsonHyperlegible-Italic.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'atkinson';
+    src: url(./assets/fonts/AtkinsonHyperlegible-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'atkinson';
+    src: url(./assets/fonts/AtkinsonHyperlegible-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+/* #endregion */
+
 @page {
-    size: A5;
+    size: A4;
     margin-top: 10mm;
     margin-bottom: 10mm;
     bleed: 6mm;
     marks: crop;
 
-    text-align: justify;
+    font-family: 'atkinson';
 }
 
 @page:left {
@@ -32,47 +87,104 @@
         color: silver;
         rotate: -13deg;
         margin-bottom: 3em;
+        margin-left: -20mm;
         z-index: -999;
     }
 }
 
-.frontpage {
-    @page {
-        margin: 0;
+.finalpage {
+    page: finalLayout;
+
+    break-before: left;
+
+    .credits {
+        position: absolute;
+        bottom: 5mm;
+        right: 5mm;
+
+        font-family: 'clash-lite';
+        color: white;
+        background-color: #111111;
+        font-size: 5mm;
+
+        text-align: right;
+
+        p {
+            margin: 0;
+        }
+        p:first-of-type {
+            font-size: 7.5mm;
+            font-family: 'clash-med';
+        }
+    }
+}
+@page finalLayout {
+    margin: 0;
+    background-image: url(./assets/backpagebg.webp);
+    background-size: cover;
+
+    @bottom-left-corner {
+        content: "";
     }
 
-    break-after: page;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    width: 100%;
-    height: 100%;
-
-    text-align: center;
+    @bottom-right-corner {
+        content: "";
+    }
 }
 
 .contents {
+    page: nonum;
+
     break-after: page;
+
+    ul {
+        list-style-type: none;
+    }
+    li::before {
+        content: "p.";
+    }
+}
+@page nonum {
+    @bottom-left-corner {
+        content: "";
+    }
+
+    @bottom-right-corner {
+        content: "";
+    }
 }
 
-.ad {
+.onepage {
     break-after: page;
+
+    p {
+        text-align: justify;
+    }
 }
 
-.chapter {
+.spread {
     break-before: left;
 }
 
-.title {
-    font-size: 1.5em;
-    margin-bottom: 0;
-
+.manifesto {
+    page: manifestoLayout
 }
-.title::first-letter {
-    font-size: 1.5em;
+@page manifestoLayout {
+    margin: 10mm 45mm;
+
+    @bottom-left-corner {
+        margin-left: -20mm;
+    }
+
+    @bottom-right-corner {
+        margin-left: 20mm;
+    }
+}
+
+.title {
+    font-family: 'clash-bold';
+    font-size: 10mm;
+    margin-bottom: 0;
 }
 
 .subtitle {
@@ -80,6 +192,23 @@
     margin: 0;
 
     color: gray;
+}
+
+.portrait {
+    border-radius: 100%;
+    width: 50mm;
+    height: 50mm;
+    float: right;
+    margin: 2mm 0 2mm 5mm;
+    background: url("./assets/poppy.webp"), #111111;
+    background-size: 60mm 60mm;
+    background-position: -6mm -6mm;
+    border: double 2mm #009bff;
+}
+
+.placeholder {
+    background-image: url("./assets/placeholder.jpg");
+    background-size: 25mm;
 }
 
 .tip {
@@ -93,4 +222,266 @@
 .tip::before {
     content: "Tip from Poppy:";
     color: blue;
+}
+
+.frontpage {
+    page: frontLayout;
+    break-after: page;
+
+    .title {
+        font-family: 'amalgama';
+        font-size: 43mm;
+        line-height: 19.5mm;
+        width: 100%;
+        text-align: center;
+        color: white;
+        margin: 0;
+        margin-top: 30mm;
+    }
+
+    .subtitle {
+        font-family: 'clash-bold';
+        font-size: 10mm;
+        height: 8mm;
+        line-height: 8mm;
+        margin-top: -.75mm;
+        text-align: justify;
+        text-transform: uppercase;
+        width: 100%;
+        background: #f1f1f1;
+        color: #111111;
+    }
+    .subtitle:after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+    }
+
+    .notapply {
+        position: absolute;
+        top: 12.5mm;
+        right: 8mm;
+        margin: 0;
+
+        font-family: 'clash-bold';
+        color: white;
+        font-size: 5mm;
+    }
+
+    .reviews {
+        position: absolute;
+        bottom: 25mm;
+        left: 5mm;
+
+        font-family: 'clash-bold';
+        font-size: 10mm;
+        color: #f1f1f1;
+
+        p {
+            margin: 0;
+            line-height: 8mm;
+        }
+        ul {
+            margin: 0;
+            padding-left: 5.5mm;
+            
+            font-family: 'clash-med';
+            font-size: 7.5mm;
+            line-height: 6mm;
+        }
+        li::marker {
+            font-family: 'axelbox';
+        }
+        li:nth-of-type(1) {
+            margin-left: 0mm;
+            list-style: "2";
+        }
+        li:nth-of-type(2) {
+            margin-left: 2mm;
+            list-style: "3";
+        }
+        li:nth-of-type(3) {
+            margin-left: 4mm;
+            list-style: "4";
+        }
+        li:nth-of-type(4) {
+            margin-left: 6mm;
+            list-style: "5";
+        }
+
+        .skewy {
+            border-color: transparent transparent transparent #ff8500;
+            border-width: 50mm;
+            border-style: solid;
+
+            position: absolute;
+            top: -45mm;
+            left: 12mm;
+
+            rotate: -15deg;
+
+            background: transparent;
+
+            z-index: -999;
+        }
+
+        .screenshot {
+            position: absolute;
+
+            width: 80mm;
+            height: 50mm;
+
+            background-image: url(./assets/orcass.JPG);
+            background-size: cover;
+
+            border: #ff8500 solid .5mm;
+        }
+        .screenshot:nth-of-type(1) {
+            top: -55mm;
+            z-index: -995;
+            left: 6mm;
+        }
+        .screenshot:nth-of-type(2) {
+            top: -57mm;
+            z-index: -996;
+            left: 4mm;
+            transform: rotate(3deg);
+        }
+        .screenshot:nth-of-type(3) {
+            top: -59mm;
+            z-index: -997;
+            left: 2mm;
+            transform: rotate(6deg);
+        }
+        .screenshot:nth-of-type(4) {
+            top: -61mm;
+            z-index: -998;
+            left: 0;
+            transform: rotate(9deg);
+        }
+
+        .gatito {
+            position: absolute;
+            transform: translateX(40mm) translateY(-5mm);
+            filter: drop-shadow(0 0 2mm black);
+        }
+    }
+
+    .toolflash {
+        position: absolute;
+        top: 90mm;
+        right: 15mm;
+
+        background: #ff0043;
+        image-rendering: pixelated;
+        background-size: 100%;
+        background-position-y: 50%;
+
+        color: #f1f1f1;
+        text-align: right;
+        border-radius: 100%;
+
+        width: 50mm;
+        height: 50mm;
+        
+        p:nth-of-type(1) {
+            font-family: 'clash-bold';
+            font-size: 12.5mm;
+            line-height: 8mm;
+            margin: 0;
+            width: 50mm;
+            padding-right: 20mm;
+        }
+        p:nth-of-type(2) {
+            font-family: 'clash-med';
+            width: 50mm;
+            padding-right: 5mm;
+            margin: 0;
+            font-size: 6mm;
+        }
+    }
+
+    .toolhate {
+        position: absolute;
+        top: 75mm;
+        left: 20mm;
+
+        display: flex;
+        flex-direction: row;
+
+        p:nth-of-type(1) {
+            font-family: 'clash-bold';
+            font-size: 12.5mm;
+            color: #f1f1f1;
+            line-height: 8mm;
+            margin: 0;
+            z-index: 999;
+
+            transform: translateY(24mm);
+        }
+        p:nth-of-type(2) {
+            font-family: 'clash-med';
+            font-size: 12.5mm;
+            line-height: 8mm;
+            color: #f1f1f1;
+            text-align: right;
+            margin: 0;
+
+            transform: translateX(-30mm);
+        }
+        .rect {
+            position: absolute;
+            width: 40mm;
+            height: 72mm;
+            margin-top: 4mm;
+
+            background: #009bff;
+        }
+    }
+
+    .introducing {
+        position: absolute;
+        bottom: 20mm;
+        right: 5mm;
+        width: 100mm;
+        margin: 0;
+
+        font-family: 'clash-bold';
+        text-align: right;
+        color: white;
+        -webkit-text-stroke: .25mm #ff0043;
+        font-size: 12mm;
+    }
+}
+@page frontLayout {
+    margin: 0;
+
+    background-image: url(./assets/frontpagebg.webp);
+    background-size: cover;
+
+    @bottom-left-corner {
+        content: "";
+    }
+
+    @bottom-right-corner {
+        content: "";
+    }
+
+    @bottom-right {
+        content: "ISSUE NR 1";
+        background: #111111;
+        color: #dfdfdf;
+        border: double 2mm #dfdfdf;
+        box-sizing: border-box;
+
+        text-align: center;
+        font-size: 14mm;
+        line-height: 10mm;
+        font-family: 'bricktext';
+
+        width: 35mm;
+        height: 15mm;
+        margin-top: -20mm;
+        margin-left: -5mm;
+    }
 }
