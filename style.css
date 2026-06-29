@@ -71,7 +71,7 @@
         font-family: 'amalgama';
         content: counter(page);
         font-size: 12em;
-        color: silver;
+        color: #e4e4e4;
         rotate: 13deg;
         margin-bottom: 3em;
         z-index: -999;
@@ -86,7 +86,7 @@
         font-family: 'amalgama';
         content: counter(page);
         font-size: 12em;
-        color: silver;
+        color: #e4e4e4;
         rotate: -13deg;
         margin-bottom: 3em;
         margin-left: -20mm;
@@ -106,7 +106,7 @@
 
         font-family: 'clash-lite';
         color: white;
-        background-color: #111111;
+        background: linear-gradient(to left, #111111 35%, transparent 100%);
         font-size: 5mm;
 
         text-align: right;
@@ -114,8 +114,9 @@
         p {
             margin: 0;
         }
-        p:first-of-type {
+        .credits-header {
             font-size: 7.5mm;
+            padding-top: 5mm;
             font-family: 'clash-med';
         }
     }
@@ -164,11 +165,6 @@
     }
 }
 
-.spread {
-    break-before: left;
-    text-align: justify;
-}
-
 .manifesto {
     page: manifestoLayout
 }
@@ -198,6 +194,28 @@
     color: gray;
 }
 
+.banner {
+    position: relative;
+    top: -35mm;
+    left: -45mm;
+    width: 260mm;
+    height: 100mm;
+
+    image-rendering: pixelated;
+    border-bottom: #ff0043 solid 5mm;
+
+    rotate: -8deg;
+
+    z-index: -999;
+}
+.banner-hero {
+    position: absolute;
+    top: -5mm;
+    right: -20mm;
+    width: 80mm;
+    transform: scaleX(-1);
+}
+
 .header {
     font-family: 'clash-lite';
     font-size: 7.5mm;
@@ -224,16 +242,86 @@
 }
 
 .tip {
-    margin: 1em;
+    margin: 5mm 0 5mm 5mm;
     padding: .5em;
 
-    border: 6px double red;
-    background: orangered;
-    color: white;
+    float: right;
+    width: 75mm;
+
+    background: #ff0043;
+    color: #f1f1f1;
 }
 .tip::before {
-    content: "Tip from Poppy:";
-    color: blue;
+    content: "POPPY TIP!";
+    font-weight: bold;
+}
+
+.toolrating {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    background: #111111;
+    color: #dfdfdf;
+
+    border: double #dfdfdf 3mm;
+
+    .rate {
+        font-family: 'amalgama';
+        font-size: 6.5mm;
+        margin: 5mm 5mm 0 5mm;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3mm;
+
+        div {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: nowrap;
+
+            span {
+                display: block;
+            }
+        }
+        img {
+            width: 40mm;
+        }
+    }
+
+    .qr {
+        width: 50mm;
+    }
+}
+
+.spread {
+    break-before: left;
+    text-align: justify;
+
+    .title {
+        position: absolute;
+        left: 0;
+        top: 50mm;
+        padding-right: 5mm;
+        
+        background: #ff0043;
+        transform: skewY(-8deg);
+    }
+    .subtitle {
+        position: absolute;
+        left: 28mm;
+        top: 56mm;
+        padding-right: 5mm;
+        
+        background: #ff0043;
+        color: white;
+        transform: skewY(-8deg);
+    }
+
 }
 
 .frontpage {
@@ -260,7 +348,7 @@
         text-align: justify;
         text-transform: uppercase;
         width: 100%;
-        background: #f1f1f1;
+        background: white;
         color: #111111;
     }
     .subtitle:after {
@@ -545,6 +633,34 @@
     .artist {
         .tooltitle {
             font-size: 9mm;
+        }
+    }
+}
+
+#orca  {
+    .banner {
+        background: url(./assets/orcabanner.JPG);
+        background-size: 150%;
+        background-position: 0 30%;
+    }
+    .rate {
+        img {
+            width: 20mm;
+        }
+    }
+    cyan {
+        background-color: #6BECC6;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        color: #111111;
+    }
+}
+
+#plano {
+    .rate {
+        img {
+            image-rendering: pixelated;
+            width: 15mm;
         }
     }
 }

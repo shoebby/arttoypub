@@ -56,7 +56,7 @@
     </section>
 
     <section class="onepage">
-        <p class="title">Introducing The Clicky Mini-Mag</p>
+        <p class="title">Introducing The CLICKY! Mini-Mag</p>
 
         <div class="portrait"></div>
 
@@ -70,13 +70,14 @@
 
         <p>I think these are good things to ask yourself and to try out, in the end it stands to benefit you as an artist to keep your mind open. Formulated one of these questions for yourself but can't find a tool to match it? Make it! Share it! Preferably with me as well!!!</p>
 
-        <p>This issue will lead with <i>Your Tools Hate You</i>, a manifesto on tools which I wrote for the Manifesto Jam organized by Cécile/Haraiva.</p>
-            
-        <p>Following this is a bit of an explainer what this mini-mag understands under 'art toys', for more on this read my thesis!</p>
-        
-        <p>Then we will take a quick aside in Toolflash; highlighting a few neat art toys and tools in short.</p>
+        <p>First though, a few pointers:</p>
 
-        <p>Finally the fun stuff; articles about a broad selection of art toys I've found and liked and used! In this issue I'll be talking about Orca, Plano, Wareware, and Puck's texturing tools. A nice spread of audio, interactive fiction, 3D, and walk-and-talk game-making.</p>
+        <p><b>RATINGS ARE PLAY</b> - There is no objective way to grade a tool so I am not going to attempt to do so. Instead, ratings will be abstract and subjective, like many things in our lives are.</p>
+
+        <p><b>PAY NOTHING</b> - This publication is free. I feel weird about receiving money for writing about other people's hard work so you should give them your money instead.</p>
+
+        <p><b>THE BLACKLIST</b> - Some are barred from reading this publication, who upon reading will be hunted down for sport. This list includes the Trump administration, Jonathan Blow, PVV/FvD/VVD/BVNL/SGP/JA21/BBB voters and members, minervisten, the entirety of Israel, Silicon Valley, Jeff Koons, and Joanne Rowling. The rest of the list is a secret, but if you fw any of these people you can make a fair judgement.
+        </p>
 
         <p>So yeah, on with the show! If you want to contact me because you know about a cool tool or are making a cool tool, feel free! I might develop more issues of this mini-mag if I like making it, so you'll have that to look forward to. Contact info below!</p>
 
@@ -92,6 +93,7 @@
 
     <section class="onepage manifesto">
         <p class="title">Your Tools Hate You</p>
+        <p class="subtitle">A manifesto about tools and those who exploit them</p>
 
         <p>The tools of the game-making trade are not neutral. They leave fingerprints all over. Creative software overall has become a gray mass of professionalism.<br>Over are the days of Kai’s Power Goo and Bryce 3D. We live in the slate-gray omnipresence of Unity, Unreal, and Adobe now, and they hate you.</p>
 
@@ -250,9 +252,11 @@
             </div>
     </section>
 
-    <section class="spread">
+    <section class="spread" id="orca">
+        <div class="banner" src="./assets/orcabanner.JPG"></div>
         <p class="title">Orca</p>
         <p class="subtitle">EVERY LETTER DOES SOMETHING???</p>
+        <img class="banner-hero" src="./assets/orcamascot.png">
 
         <p>
             In John Conway's <i>Game of Life</i> combinations of pixels are awakened by their neighbours and their relative positions. Constructing a so-called 'automaton' here can lead to a number of outcomes. They can destroy themselves near-instantly, they can do nothing, or, if you're lucky and/or knowledgeable enough, they can move and exhibit faux-intelligent behaviours, sometimes in mesmerizing ways.
@@ -263,54 +267,109 @@
 
         <p class="header">Offline First</p>
         <p>
-            To talk about <i>Orca</i> I first need to elucidate a bit on the artist duo responsible for spawning it. Rek and Devine are developers of playful, free, and open-source software who positioned themselves extremely clearly; tools that fully function offline, can be ran on 20 year old hardware without issue, open to be studied, modified, and repaired, anticolonialist, antifascist, and opposed to oppressive and coercive power structures of every kind. They also live on a boat.
+            To talk about <i>Orca</i> I first need to elucidate a bit on the artist duo responsible for spawning it. Rek and Devine are developers of playful, low-tech, free, and open-source software who position their practice extremely clearly; tools that fully function offline, can be ran on 20 year old hardware without issue, open to be studied, modified, and repaired, anticolonialist, antifascist, and opposed to oppressive and coercive power structures of every kind. They also live on a boat.
         </p>
         <p>
-            Over the years they've showed not only their technical expertise through their tools, albeit impressive to a daunting degree; they just have these incredible ideas for software that have truly never existed before. Taking <i>Orca</i>'s sibling <i>Dotgrid</i> for example, it is a vector drawing program that works off of a grid-and-points system, drawing lines between the points. It's so disarmingly simple and clever, and it's something you'll notice in more of their tools. They might not do a ton, but the things they do they do incredibly well.
+            Over the years they've shown not only their technical expertise through their tools (albeit impressive to a daunting degree), they also just have incredible ideas about and for dastardly simple software. Taking <i>Orca</i>'s sibling <i>Dotgrid</i> as an example, it is a vector drawing program that works off of a grid-and-points system, drawing lines between the points. It's so disarmingly simple and clever, and it's something you'll notice in more of their tools. They might not do a ton, but the things they do they do incredibly well.
         </p>
 
         <p class="header">Getting Started</p>
+
+        <div class="tip">
+            Check out the Orca guided tours and tutorials by <b>Allieway Audio</b>! They're old but incredibly helpful if you want to get started.
+        </div>
+
         <p>So you open up <i>Orca</i> and see some text, which disappears into a dark grid the moment you click somewhere. Scary! Not to worry, there's documentation practically everywhere! On the repository, on the website, inside of the zipped folder you just downloaded; and that documentation will say something beautiful: every key on the keyboard is a function. It's even somewhat true! X is a teleporter, J is the jumper, Y is the yumper, T is the track builder... I could go on but the interesting thing is how these different functions fit into one another.</p>
 
         <p>You might be lured into keysmashing to see if it does something, but it requires quite some intention to actually start making sound. Since it only produces MIDI 'bangs', you actually need something to send it to. This can be a DAW like <i>Ableton</i> or, my personal choice, <i>FL Studio</i>, where the signal can be picked up by a sample or a generator you've set up in the appropriate channel.</p>
 
-        <p>With that all set up you can actually start to write some noise-making creatures. It can be as simple as attaching a (C)lock to a (T)rack and (D)elay to send a sequence of notes to the desired channel.</p>
+        <p>With that all set up you can actually start to write some noise-making creatures. It can be as simple as attaching a <cyan>C</cyan>lock to a <cyan>T</cyan>rack and <cyan>D</cyan>elay to send a sequence of notes to the desired channel.</p>
 
-        <div class="tip">
-            If you use Paged.JS you are really cool and interesting!
+        
+
+        <div class="toolrating">
+            <div class="rate">
+                <div>
+                    <span>R</span><span>A</span><span>T</span><span>E</span><span>D</span>
+                </div>
+                <img src="./assets/ratings/rating-orca.png">
+            </div>
+            <img class="qr" src="./assets/qr/qr-orca.webp">
         </div>
     </section>
 
-    <section class="spread">
+    <section class="spread" id="plano">
         <p class="title">Plano</p>
         <p class="subtitle">Collaging... The webby way...</p>
 
         <div class="tip">
             If you use Paged.JS you are really cool and interesting!
         </div>
+
+        <div class="toolrating">
+            <div class="rate">
+                <div>
+                    <span>R</span><span>A</span><span>T</span><span>E</span><span>D</span>
+                </div>
+                <img src="./assets/ratings/rating-plano.png">
+            </div>
+            <img class="qr" src="./assets/qr/qr-plano.webp">
+        </div>
     </section>
 
-    <section class="spread">
+    <section class="spread" id="wareware">
         <p class="title">Wareware</p>
         <p class="subtitle">The walkie-talkie builder of my dreams...</p>
 
         <div class="tip">
             If you use Paged.JS you are really cool and interesting!
         </div>
+
+        <div class="toolrating">
+            <div class="rate">
+                <div>
+                    <span>R</span><span>A</span><span>T</span><span>E</span><span>D</span>
+                </div>
+                <img src="./assets/ratings/rating-wareware.jpg">
+            </div>
+            <img class="qr" src="./assets/qr/qr-wareware.webp">
+        </div>
     </section>
 
-    <section class="spread">
+    <section class="spread" id="puck">
         <p class="title">Puck's Seamlessifier + Ripper & Pixelizer</p>
         <p class="subtitle">Rip and tear your photos into useable textures!</p>
 
         <div class="tip">
             If you use Paged.JS you are really cool and interesting!
         </div>
+
+        <div class="toolrating">
+            <div class="rate">
+                <div>
+                    <span>R</span><span>A</span><span>T</span><span>E</span><span>D</span>
+                </div>
+                <img src="./assets/ratings/rating-puck.jpg">
+            </div>
+            <img class="qr" src="./assets/qr/qr-puck.webp">
+        </div>
     </section>
 
     <section class="finalpage">
         <div class="credits">
-            <p>Font Credits</p>
+            <p class="credits-header">Tool Credits</p>
+            <p>F15H 74NK by -hexcavator-</p>
+            <p>PLAYSCII by JP LeBreton</p>
+            <p>SQUIDWARD ENGINE by Fred the fred</p>
+            <p>OPHAGIRL DOLLMAKER TEMPLATE by Ophanimkei</p>
+            <p>BECOME A GREAT ARTIST IN 10 SECONDS by Andi McClure and Michael Brough</p>
+            <p>ORCA by Hundredrabbits</p>
+            <p>PLANO by Kate Bagenzo</p>
+            <p>WAREWARE by Riprip</p>
+            <p>PUCK'S SEAMLESSIFIER + RIPPER by Puck</p>
+            <p>PUCK's PIXELIZER by Puck</p>
+
+            <p class="credits-header">Font Credits</p>
             <p>ATKINSON HYPERLEGIBLE by the Braille Institute</p>
             <p>AMALGAMA from NR74W's WipEout fonts collection</p>
             <p>BRICK TEXT LOGO by YutaONE</p>
