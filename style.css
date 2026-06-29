@@ -68,6 +68,7 @@
     margin-right: 10mm;
 
     @bottom-left-corner {
+        font-family: 'amalgama';
         content: counter(page);
         font-size: 12em;
         color: silver;
@@ -82,6 +83,7 @@
     margin-right: 25mm;
 
     @bottom-right-corner {
+        font-family: 'amalgama';
         content: counter(page);
         font-size: 12em;
         color: silver;
@@ -164,6 +166,7 @@
 
 .spread {
     break-before: left;
+    text-align: justify;
 }
 
 .manifesto {
@@ -188,10 +191,19 @@
 }
 
 .subtitle {
+    font-family: 'clash-med';
     font-size: 1.25em;
     margin: 0;
 
     color: gray;
+}
+
+.header {
+    font-family: 'clash-lite';
+    font-size: 7.5mm;
+    margin-bottom: 0;
+    background-color: #111111;
+    color: #f1f1f1;
 }
 
 .portrait {
@@ -483,5 +495,56 @@
         height: 15mm;
         margin-top: -20mm;
         margin-left: -5mm;
+    }
+}
+
+#toolflash {
+    .title {
+        position: absolute;
+        left: -30mm;
+        top: -10mm;
+        width: 220mm;
+        height: 10mm;
+
+        font-size: 10mm;
+        text-align: left;
+        text-wrap: nowrap;
+        margin: 0;
+
+        background-color: #111111;
+        color: #dfdfdf;
+    }
+
+    .flash {
+        .tooltitle {
+            font-family: 'clash-bold';
+            font-size: 10mm;
+            margin: 0;
+        }
+        img {
+            float: right;
+            margin: 2mm 0 3mm 5mm;
+            width: 100mm;
+        }
+
+        padding: 5mm 0;
+    }
+    
+    .fishtank {
+        
+    }
+    .playscii {
+        
+    }
+    .squidward {
+
+    }
+    .doll {
+
+    }
+    .artist {
+        .tooltitle {
+            font-size: 9mm;
+        }
     }
 }
