@@ -185,8 +185,7 @@
         <p>This Manifesto was written in Deepdwn, 11 hours before a funeral, and sits in solidarity with tiny tools.</p>
     </section>
 
-    <section class="onepage">
-        <div class="placeholder" style="width: 210mm; height: 75mm; position: relative; left: -10mm;"></div>
+    <section class="onepage" id="definition">
         <p class="title">Art Toy</p>
         <p class="subtitle">/ɑːt tɔɪ/</p>
 
@@ -195,7 +194,6 @@
         <p>An additional note to make however is how these tool-toys often aim to reimagine the very act of making something digitally. Remaking <i>Maya</i> is one thing, but questioning <i>Maya</i>'s method for creating 3D models is something else entirely. <i>ZBrush</i> can be seen as an example of this, even if it has become the standard for sculpting highly detailed models by now. It being founded by a guy with an alias as silly and 'gamer' as "Pixolator" should tell you something. It fundamentally rethinks 3D modelling as a playful, claylike act, rather than a precise, CAD-like process of extrusion and bevel.</p>
 
         <p>
-            <img src="./assets/placeholder.jpg" style="float: right; margin: 0 0 3mm 3mm; width: 40mm;">
             It's so good and fun that it has been widely adopted, bought by Maxon, and turned into a impossibly priced, bloated, subscription-based product!
         </p>
 
@@ -212,14 +210,14 @@
             <p class="title">TOOLFLASH!TOOLFLASH!TOOLFLASH!TOOLFLASH!TOOLFLASH!TOOLFLASH!TOOLFLASH!TOOLFLASH!TOOLFLASH!</p>
 
             <div class="flash fishtank">
-                <img src="./assets/placeholder.jpg">
+                <img src="./assets/screenshot-fishtank.png">
                 <p class="tooltitle">F15H 74NK</p>
                 <p>You might be mistaken to believe that <i>F15H 74NK</i> is a polygon drawing program, with the various creations you can find in the comments; in actuality it is a music toy!<br>
                 Tone is affected by a given polygon's shape, size, colour; providing a new dimension to music-making to lead into compelling results! Not to mention the intrinsic appeal of hearing what a poly-drawing of a given videogame character sounds like.</p>
             </div>
 
             <div class="flash playscii">
-                <img src="./assets/placeholder.jpg">
+                <img src="./assets/screenshot-playscii.jpg">
                 <p class="tooltitle">Playscii</p>
                 <p>
                     <i>Playscii</i> takes the age-old art of ASCII-based drawing and hones it to perfection. Offering a pleasant drawing interface, great color palettes, and intriguing character sets to use; it's as expansive as it is uncompromising.<br>
@@ -228,7 +226,7 @@
             </div>
 
             <div class="flash squidward">
-                <img src="./assets/placeholder.jpg">
+                <img src="./assets/screenshot-squidward.png">
                 <p class="tooltitle">Squidward Engine</p>
                 <p>
                     Based on Spongebob's old, web-based <i>Game Builder</i> this fan(?)made iteration proves itself to be a surprisingly solid 2D platforming engine! It's cute and fun to play around with, like just about any functional level editor. Give it a spin!
@@ -250,19 +248,27 @@
                     It may be an incredibly smug piece of software, but its so much fun to play around with! Just by ways of most keys doing <i>something</i> means that you can smash, write words, write in patterns, and the crunchy patterns it creates can be quite pretty and useful for game assets!
                 </p>
             </div>
+
+            <div class="flash ots">
+                <img src="./assets/screenshot-ots.png">
+                <p class="tooltitle">OTS-01</p>
+                <p>
+                    A virtual synth with some incredible surprises up its sleeve. Drawing waveforms is a fun and accessible way to dip your toes into sound design, and this is one of the more elegant iterations on this idea. Maybe take a look at the screws as well, they seem a bit loose... hehe,,,
+                </p>
+            </div>
     </section>
 
     <section class="spread" id="orca">
-        <div class="banner" src="./assets/orcabanner.JPG"></div>
+        <div class="banner"></div>
         <p class="title">Orca</p>
         <p class="subtitle">EVERY LETTER DOES SOMETHING???</p>
         <img class="banner-hero" src="./assets/orcamascot.png">
 
-        <p>
+        <p style="margin-top: 85mm;">
             In John Conway's <i>Game of Life</i> combinations of pixels are awakened by their neighbours and their relative positions. Constructing a so-called 'automaton' here can lead to a number of outcomes. They can destroy themselves near-instantly, they can do nothing, or, if you're lucky and/or knowledgeable enough, they can move and exhibit faux-intelligent behaviours, sometimes in mesmerizing ways.
         </p>
         <p>
-            <i>Orca</i>, to me, is the auditory equivalent to Conway's critter machine. Developed by Hundredrabbits, as part of the suite of software for their own virtual machine <i>Uxn</i>, it offers a new way of even 'programming' music as opposed to other more traditional live-coding programs like <i>Strudel</i> (which is still really cool and worth checking out!!!).
+            <i>Orca</i>, to me, is the auditory equivalent to Conway's critter machine. Developed by Hundredrabbits, as part of the suite of software for their own virtual machine <i>Uxn</i>, it offers a fresh new way of 'programming' music, different even from its contemporaries like <i>Strudel</i> (which is still really cool and worth checking out!!!)
         </p>
 
         <p class="header">Offline First</p>
@@ -275,18 +281,27 @@
 
         <p class="header">Getting Started</p>
 
-        <div class="tip">
+        <div class="tip" style="float: left; margin: 0 5mm 5mm 0;">
             Check out the Orca guided tours and tutorials by <b>Allieway Audio</b>! They're old but incredibly helpful if you want to get started.
         </div>
 
-        <p>So you open up <i>Orca</i> and see some text, which disappears into a dark grid the moment you click somewhere. Scary! Not to worry, there's documentation practically everywhere! On the repository, on the website, inside of the zipped folder you just downloaded; and that documentation will say something beautiful: every key on the keyboard is a function. It's even somewhat true! X is a teleporter, J is the jumper, Y is the yumper, T is the track builder... I could go on but the interesting thing is how these different functions fit into one another.</p>
+        <p>So you open up <i>Orca</i> and see some text, which disappears into a dark grid the moment you click somewhere. Scary! Not to worry, there's documentation practically everywhere! On the repository, on the website, inside of the zipped folder you just downloaded; and that documentation will say something beautiful: every key on the keyboard is a function. Perhaps even more compellingly, these functions can fit together and interact with one another. One function's output can be another's input in a game of spatial puzzling not too dissimilar from <i>Factorio</i> or <i>Satisfactory</i>.</p>
 
-        <p>You might be lured into keysmashing to see if it does something, but it requires quite some intention to actually start making sound. Since it only produces MIDI 'bangs', you actually need something to send it to. This can be a DAW like <i>Ableton</i> or, my personal choice, <i>FL Studio</i>, where the signal can be picked up by a sample or a generator you've set up in the appropriate channel.</p>
-
-        <p>With that all set up you can actually start to write some noise-making creatures. It can be as simple as attaching a <cyan>C</cyan>lock to a <cyan>T</cyan>rack and <cyan>D</cyan>elay to send a sequence of notes to the desired channel.</p>
-
+        <div class="tip">
+            Check out the VSTs by <b>Unplugred</b>, they're incredible and toy-like and fit perfectly with <i>Orca</i>. My favourites include <i>Magic Carpet</i> and <i>Clickbox</i>!
+        </div>
         
+        <p>You build a factory that produces MIDI 'bangs', which you will need to send somewhere for further processing. This can be anything with a MIDI input, like a synth and DAWs like <i>Ableton</i> or, my personal choice, <i>FL Studio</i>. Here the signal can be picked up and processed and turned into actual sound, whether it be a sample or a generator. Here another layer of play is introduced through knobs, dials, VSTs, filters, samplers; all influencing not only the sound but arrangement of your sound-production.</p>
 
+        <p>With that all set up you can actually start to write some noise-making creatures. It can be as simple as attaching a <cyan>C</cyan>lock to a <cyan>T</cyan>rack and <cyan>D</cyan>elay to send a sequence of notes to the desired channel. In the end it's not difficult to get it making sound, but wrangling the sound into something pleasant is where the challenge lies. Not to mention the grid-based spatial challenges!</p>
+        
+        <p>A visually pleasing, jumbled mess of notes is easy to arrive at, but with the right sound design even that can be beautiful as ambience or harmonic backing.</p>
+
+        <p class="header">Computation is the Point</p>
+
+        <p>
+            <i>Orca</i> has no pretenses about what it is and produces, it is deeply computational and embraces it with open arms. In contrast, there are plenty of math and logic functions to further drive this point. There has always been a subsection in digital music production that is avoidant of its own digital nature, which aims to reproduce traditional instrumentation as perfectly as possible. I've always found this a bit of an odd pursuit, albeit an understandable one. It's convenient to not have to organize a full orchestra, but doesn't that miss the point of orchestral scores?
+        </p>
         <div class="toolrating">
             <div class="rate">
                 <div>
@@ -296,15 +311,59 @@
             </div>
             <img class="qr" src="./assets/qr/qr-orca.webp">
         </div>
+        <p>
+            I find digital's pursuit of new and compelling timbre much more appealing, but the very notation of digital music often remains constrained by a piano roll. People (read: Wendy Carlos) kind of nailed it with modular synthesis, but in a seeming effort to make digital more accessible and more alike to traditional music-making it has become constricted in structures like a child spinning themselves into curtains. <i>FL Studio</i>'s <i>Soundgoodizer</i> is an absolute evil.
+        </p>
+        <p>
+            Tools like <i>Orca</i> take the very composition of music and move it into digital, an inhuman interface to match the artifice of synthesis. Its logic remains scrutible while it presents a new way to think about playing notes; composing with clocks and moving blocks, melding human and machine interface, foregoing constriction, embracing the signal.
+        </p>
     </section>
 
     <section class="spread" id="plano">
+        <div class="banner"></div>
         <p class="title">Plano</p>
-        <p class="subtitle">Collaging... The webby way...</p>
+        <p class="subtitle">Collaging... The webby way!</p>
+        <img class="banner-hero" src="./assets/gatito.png">
 
-        <div class="tip">
-            If you use Paged.JS you are really cool and interesting!
-        </div>
+        <p style="margin-top: 85mm;">
+            I was 11 years old when I found <i>Yume Nikki</i>, a game about dreaming that would wind up shaping me as a game maker and game player. It was the first videogame where the only expectation of me was to explore, I barely knew about the different 'effects' you could collect. 
+        </p>
+        <p>
+            Other exploration games are quick to give you goals, like in <i>Minecraft</i>; fell trees, build a crafting table, make tools, mine ore, and before you know it you're asked to go to hell and kill a dragon. It's exciting, it draws you in, and it's game-y. <i>Yume Nikki</i>, and games like it, instead seem more interested in a less-active form of exploration; take in the sights, interact with the few things that let you, more akin to a museum than a box of Lego's.
+        </p>
+        <p>
+            I would even dare to say it's anticolonial game design, where by being asked or forced to respect a (game) environment for what it is, it turns our activity into something more thoughtful and observant. Let's take a look at a game engine for making games like these.
+        </p>
+
+        <p class="header">Like a Pancake</p>
+        <p>
+            Flatgames are a loosely defined genre of games where you walk and hear and see from a top-down 2D perspective. <i>Plano</i> is for making these kinds of games and nothing else. I personally adore this all-out commitment of a game engine, be it for visual novels like <i>Renpy</i> or walk-and-talk games like <i>Bitsy</i>. It adds this interesting sort of sheen to a game made in these tools, where the engine is allowed to be a participating presence post-compile.
+        </p>
+        <p class="tip">
+            Kate Bagenzo also created <b>Windowpane</b>, a tool for making web-based hyperlink art, for example visual novels!<br>
+            It's fun to use and very open-ended, and a good way to learn the basics of HTML and CSS.
+        </p>
+        <p>
+            In <i>Plano</i> games this can be felt through not only an iconic loading screen, but the way a given character moves, the collage-y use of images as background elements, and the supportive role of text that can be written and placed in a similarly collage-y manner; this contrasts generalistic game engines, who make themselves small after their bootup splash.
+        </p>
+        <p>
+            So what do these flatgames do? Turns out that even with limitations, and perhaps thanks to them, they prove versatile. Kate Bagenzo, the developer of the tool, has written a manifesto (<i>Sticky Fingers</i>) and recreated a memory (<i>the old view fro the bedroom window</i>) inside of it.
+        </p>
+        <p>
+            A <i>Plano</i>-powered game that jumped out to me was <i>At least there's lilacs</i> by Sraëka Lillian. As a little blue alligator type thing you look for bits and pieces of poem. The text is fractured and torn apart, spread out over a large area to make the reader meander through and look for the prose. It can take some time, but at least there's lilacs!
+        </p>
+
+        <p class="header">A Game Is A Place</p>
+        <img src="./assets/screenshot-lilac.png" style="float: right; width: 105mm; margin: 5mm 0 5mm 5mm;">
+        <p>
+            Let's circle back on the anticolonial thing, because I think it's worth writing about in relation to <i>Plano</i> and other flat(-ish)games. Where in most exploration games you externalise your exploration in some way (usually by changing or affecting your direct environment) these games instead frame the environment as-is. There are no factories to build, no enemies to wipe out, no resources to harvest; you are an observer and a guest, felt through the very mechanics granted to you.
+        </p>
+        <p>
+            This very granting of mechanics is what frames your game: if you give players a gun they're going to try and shoot everything. Just like how in <i>Yume Nikki</i>, the moment players find the knife effect they start stabbing anything and everything just to see what it does.
+        </p>
+        <p>
+            <i>Plano</i> seems to understand this well, and know that in order to have people engage with a collage game the focus needs to be on the background rather than the character. While moving around offers a compelling sense of spatiality, the lack of anything else helps draw focus to what would normally be seen as the background. You walk around not to reach a specific destination either, but to get to see more of the background.
+        </p>
 
         <div class="toolrating">
             <div class="rate">
@@ -315,15 +374,26 @@
             </div>
             <img class="qr" src="./assets/qr/qr-plano.webp">
         </div>
+
+        <p>
+            This kind of game is not without its considerable number of detractors, however. Often considered to "not count" as a game due to the lack of interactivity, the choice to omit is not counted as a design decision but laziness. A favourite of mine is when a lack of jumping in a first-person game is counted as a pure slight, for example in "walking simulators". In <i>The Stanley Parable</i> this is even made into a lengthy gag ending with the jump circle.
+        </p>
+        <p>
+            I want to argue that game engine options like <i>Plano</i> help develop this perspective further, that games don't have to be defined by the features they lack but rather the features they do have and the reasons why they have them. I think it's good practice to assume intention when engaging with art, more controversially that it's a base-line requirement.
+        </p>
+        <p>
+            At the end of the day <i>Plano</i> works from a place of 'smallness', where games don't have to be hours-long epics or dopamine-sick retinatainment. Games can be slow, small, and simple. In an age where everything is technically possible, choosing to do little is a radical act.
+        </p>
     </section>
 
     <section class="spread" id="wareware">
+        <div class="banner"></div>
         <p class="title">Wareware</p>
         <p class="subtitle">The walkie-talkie builder of my dreams...</p>
 
-        <div class="tip">
-            If you use Paged.JS you are really cool and interesting!
-        </div>
+        <p style="margin-top: 85mm;">
+
+        </p>
 
         <div class="toolrating">
             <div class="rate">
@@ -337,6 +407,7 @@
     </section>
 
     <section class="spread" id="puck">
+        <div class="banner"></div>
         <p class="title">Puck's Seamlessifier + Ripper & Pixelizer</p>
         <p class="subtitle">Rip and tear your photos into useable textures!</p>
 
