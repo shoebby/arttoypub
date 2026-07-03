@@ -57,8 +57,8 @@
     size: A4;
     margin-top: 10mm;
     margin-bottom: 10mm;
-    bleed: 0mm;
-    marks: crop;
+    bleed: 0;
+    /* marks: crop; */
 
     font-family: 'atkinson';
 }
@@ -153,11 +153,19 @@
 #contents {
     page: contentLayout;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
     break-after: page;
 
     ul {
         list-style-type: none;
         padding: 0;
+        margin: 0;
+        width: 85%;
     }
     .pagenum {
         font-family: 'amalgama';
@@ -643,6 +651,11 @@
     }
 
     @bottom-right {
+        position: absolute;
+        bottom: -5mm;
+        right: 5mm;
+        padding: 1mm;
+
         content: "ISSUE NR 1";
         background: #111111;
         color: #dfdfdf;
@@ -651,13 +664,8 @@
 
         text-align: center;
         font-size: 14mm;
-        line-height: 10mm;
+        line-height: 18mm;
         font-family: 'bricktext';
-
-        width: 35mm;
-        height: 15mm;
-        margin-top: -20mm;
-        margin-left: -5mm;
     }
 }
 
@@ -710,25 +718,15 @@
 
 #toolflash {
     .title {
-        position: absolute;
-        top: -10mm;
-        width: 215mm;
-        height: 10mm;
+        font-size: 15mm;
+        margin: 0 0 0mm 0;
 
-        font-size: 10mm;
-        letter-spacing: 1.1mm;
-        text-wrap: nowrap;
-        margin: 0;
-
-        background-color: #111111;
-        color: #dfdfdf;
+        color: #ff0043;
     }
     .t1 {
-        left: -30mm;
         text-align: right;
     }
     .t2 {
-        right: -30mm;
         text-align: left;
     }
 
