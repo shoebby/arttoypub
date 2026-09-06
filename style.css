@@ -733,13 +733,26 @@
     .flash {
         .tooltitle {
             font-family: 'clash-bold';
-            font-size: 10mm;
+            font-size: 8mm;
+            margin: 0;
+        }
+        .toolauthor {
+            font-family: 'clash-med';
+            font-size: 4mm;
             margin: 0;
         }
         img {
             float: right;
             margin: 2mm 0 3mm 5mm;
             width: 100mm;
+        }
+        a {
+            color: #ff0043;
+            text-decoration: none;
+        }
+        a:hover {
+            color: black;
+            text-decoration: underline 1mm #ff0043;
         }
 
         padding: 4mm 0;
