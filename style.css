@@ -4,10 +4,6 @@
     src: url(./assets/fonts/BrickTextLogo.otf);
 }
 @font-face {
-    font-family: 'bricktext-expand';
-    src: url(./assets/fonts/BrickTextLogo-Expand.otf);
-}
-@font-face {
     font-family: 'axelbox';
     src: url(./assets/fonts/AxelBox.otf);
 }
